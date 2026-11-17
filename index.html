@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050f24">
-<meta name="description" content="HK HUB – All In One Station, Ganesh Talav, Miraj. 30 service categories. One enquiry, the right service.">
+<meta name="description" content="HK HUB – All In One Station, Ganesh Talav, Miraj. service listings. One enquiry, the right service.">
 <title>HK Hub In One Station, Miraj</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1161,7 +1161,7 @@ jobs to loans. Tell HK Hub what you are
 looking for and we will point you to the right service.
 </p>
 <div class="hero-actions">
-<a class="btn" href="#services">Browse 30 Services →</a>
+<a class="btn" href="#services">Browse <span id="serviceCountButton">Services</span> →</a>
 <a class="btn btn-ghost"
 href="https://wa.me/919579633643?text=Hello%20HK%20Hub"
 target="_blank" rel="noopener">
@@ -1169,7 +1169,7 @@ Chat on WhatsApp
 </a>
 </div>
 <div class="hero-trust">
-<span><b>30</b> service categories</span>
+<span><b id="serviceCountHero">0</b> service listings</span>
 <span><b>1</b> simple enquiry</span>
 <span><b>Call</b> · <b>WhatsApp</b> · <b>Form</b></span>
 </div>
@@ -1196,7 +1196,7 @@ Find my service
 <div class="wrap">
 <div class="head reveal">
 <div class="eyebrow dark">What we offer</div>
-<h2>Thirty services, one doorway</h2>
+<h2>FourtyNine services, one doorway</h2>
 <p>Tap any card to see what it covers, then enquire in a few seconds.</p>
 </div>
 <div class="toolbar reveal">
@@ -1448,24 +1448,36 @@ label:"Events & Lifestyle",
 g:"linear-gradient(135deg,#7a1f5c,#2b1055)"
 },
 Business: {
-label:"Business & Work",
+label:"Business & Digital",
 g:"linear-gradient(135deg,#1650a8,#061633)"
 },
-Travel: {
-label:"Travel & Stay",
+Transport: {
+label:"Transport & Travel",
 g:"linear-gradient(135deg,#0b7a8c,#063b52)"
 },
 Education: {
-label:"Education",
+label:"Education & Classes",
 g:"linear-gradient(135deg,#5b3fb5,#1e1b5e)"
 },
 Home: {
-label:"Home & Vehicle",
+label:"Home & Property",
 g:"linear-gradient(135deg,#b4561b,#4a1f0a)"
 },
 Health: {
 label:"Health & Care",
 g:"linear-gradient(135deg,#0f7a5a,#073b2e)"
+},
+Beauty: {
+label:"Beauty & Fashion",
+g:"linear-gradient(135deg,#b83280,#4a1648)"
+},
+Arts: {
+label:"Arts & Handmade",
+g:"linear-gradient(135deg,#a65b18,#4c2b0c)"
+},
+Food: {
+label:"Food & Beverages",
+g:"linear-gradient(135deg,#b45309,#5b2607)"
 }
 };
 /* ============================================================
@@ -1478,6 +1490,7 @@ wedding: "photo-1519741497674-611481863552",
 security: "photo-1581092795360-fd1ca04f0952",
 filming: "photo-1492619375914-88005aa9e8fb",
 tea: "photo-1554118811-1e0d58224f24",
+home: "photo-1581578731548-c64695cc6952",
 interior: "photo-1600210492486-724fe5c67fb0",
 hotel: "photo-1566073771259-6a8506099945",
 apartment: "photo-1600596542815-ffad4c1539a9",
@@ -1496,20 +1509,62 @@ labour: "photo-1521737711867-e3b97375f902",
 car: "photo-1492144534655-ae79c964c9d7",
 mechanic: "photo-1486262715619-67b85e0b08d3",
 laundry: "photo-1517677208171-0bc6725a3e60",
-carwash: "photo-1607860108855-95b3f6c1a",
+carwash: "photo-1661501041641-3e731115e687",
 gym: "photo-1534438327276-14e5300c3a48",
 cleaning: "photo-1581578731548-c64695cc6952",
 appliances: "photo-1556911220-bff31c812dba",
 repair: "photo-1621905251189-0f4537c4a7a6",
 physiotherapy: "photo-1576091160399-112ba8d25d1d",
 shop: "photo-1441986300917-64674bd600d8",
-smartphone: "photo-1511707171634-5f897ff02aa9"
+smartphone: "photo-1511707171634-5f897ff02aa9",
+yoga: "photo-1544367567-0f2fcb009e0b",
+software: "photo-1518770660439-4636190af475",
+blood: "photo-1579684385127-1ef15d508118",
+makeup: "photo-1522335789203-aabd1fc54bc9",
+mehendi: "photo-1590736969955-71cc94901144",
+water: "photo-1548839140-29a749e1cf4d",
+handmade: "photo-1452860606245-08befc0ff44b",
+jewellery: "photo-1617038220319-276d3cfab638",
+photography: "photo-1542038784456-1ea8e935640e",
+dress: "photo-1490481651871-ab68de25d43d",
+nails: "photo-1604654894610-df63bc536371",
+music: "photo-1507838153414-b4b713384a76",
+furniture: "photo-1555041469-a586c61ea9bc",
+painter: "photo-1562259949-e8e7689d7828",
+centering: "photo-1504307651254-35680f356dfd",
+rickshaw: "photo-1570125909232-eb263c188f7e",
+dance: "photo-1504609813442-a8924e83f76e"
 };
+
+/* Local images stored in your project folder (used instead of Unsplash) */
+const LOCAL_PHOTO_MAP = {
+carwashlocal: "Images/carwash.jpg",
+vadhuvarlocal: "Images/vaduvar.jpg",
+mehendilocal: "Images/mehendi.jpg"
+};
+
 /* Get Unsplash background URL */
+// function photo(keyword) {
+// const key = keyword.split(",")[0].trim();
+// const id = PHOTO_MAP[key] || PHOTO_MAP.office;
+// return `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=85`;
+// }
+
 function photo(keyword) {
-const key = keyword.split(",")[0].trim();
-const id = PHOTO_MAP[key] || PHOTO_MAP.office;
-return `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=85`;
+    const key = keyword.split(",")[0].trim();
+
+    if (LOCAL_PHOTO_MAP[key]) {
+        return LOCAL_PHOTO_MAP[key];
+    }
+
+    const id = PHOTO_MAP[key];
+
+    if (!id) {
+        console.warn("Image mapping missing for:", key);
+        return "";
+    }
+
+    return `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=85`;
 }
 /* Set CSS background image */
 function setPhotoBackground(element, keyword, category) {
@@ -1524,7 +1579,7 @@ element.style.backgroundPosition = "center";
 element.style.backgroundRepeat = "no-repeat";
 }
 /* ============================================================
-ALL 30 SERVICES
+ALL SERVICE LISTINGS
 ============================================================ */
 const SERVICES = [
 {
@@ -1594,7 +1649,7 @@ i:[
 },
 {
 n:"Hotels",
-c:"Travel",
+c:"Transport",
 k:"hotel,room",
 s:"Hotel and accommodation enquiries.",
 l:"Need a place to stay for your family, guests or a function? Tell us your dates and number of people.",
@@ -1620,7 +1675,7 @@ i:[
 },
 {
 n:"Travelers",
-c:"Travel",
+c:"Transport",
 k:"bus,travel",
 s:"Bus, train, car, aeroplane and helicopter travel enquiries.",
 l:"From a local ride to a long trip, tell us where, when and how many people are travelling.",
@@ -1634,7 +1689,7 @@ i:[
 {
 n:"Vadhuvar Suchak",
 c:"Events",
-k:"bride,groom",
+k:"vadhuvarlocal",
 s:"Marriage matchmaking services.",
 l:"Looking for a suitable match for yourself or someone in your family?",
 i:[
@@ -1724,7 +1779,7 @@ i:[
 },
 {
 n:"Mess",
-c:"Home",
+c:"Food",
 k:"indian,food",
 s:"Meal and mess service enquiries.",
 l:"Looking for daily meals away from home, or food for a group?",
@@ -1814,17 +1869,17 @@ i:[
 ]
 },
 {
-n:"Car Wash",
-c:"Home",
-k:"carwash",
-s:"Car washing and cleaning services.",
-l:"Get your car looking fresh again. Ask about wash options for your vehicle.",
-i:[
-"Exterior wash",
-"Interior cleaning",
-"Polish and finishing",
-"Regular wash enquiries"
-]
+    n:"Car Wash",
+    c:"Home",
+    k:"carwashlocal",
+    s:"Car washing and cleaning services.",
+    l:"Get your car looking fresh again. Ask about wash options for your vehicle.",
+    i:[
+        "Exterior wash",
+        "Interior cleaning",
+        "Polish and finishing",
+        "Regular wash enquiries"
+    ]
 },
 {
 n:"Health & Fitness Centre",
@@ -1839,19 +1894,19 @@ i:[
 "Membership enquiries"
 ]
 },
-{
-n:"Cleaning",
-c:"Home",
-k:"cleaning,home",
-s:"Home and company cleaning services.",
-l:"For homes, shops and offices. Tell us the size of the space and when you need it cleaned.",
-i:[
-"Home cleaning",
-"Office and shop cleaning",
-"Post-event and move-in cleaning",
-"One-time or regular cleaning"
-]
-},
+// {
+// n:"Cleaning",
+// c:"Home",
+// k:"cleaning,home",
+// s:"Home and company cleaning services.",
+// l:"For homes, shops and offices. Tell us the size of the space and when you need it cleaned.",
+// i:[
+// "Home cleaning",
+// "Office and shop cleaning",
+// "Post-event and move-in cleaning",
+// "One-time or regular cleaning"
+// ]
+// },
 {
 n:"Second-Hand Materials",
 c:"Business",
@@ -1866,17 +1921,17 @@ i:[
 ]
 },
 {
-n:"Home Services",
-c:"Home",
-k:"repair,home",
-s:"Useful services and support for your home.",
-l:"For the many small jobs around a home. Describe what needs doing.",
-i:[
-"Plumbing and electrical work",
-"Repairs and maintenance",
-"Painting and small fixes",
-"Help finding the right person"
-]
+    n:"Home Services",
+    c:"Home",
+    k:"home",
+    s:"Useful services and support for your home.",
+    l:"For the many small jobs around a home. Describe what needs doing.",
+    i:[
+        "Plumbing and electrical work",
+        "Repairs and maintenance",
+        "Painting and small fixes",
+        "Help finding the right person"
+    ]
 },
 {
 n:"Physiotherapist",
@@ -1916,15 +1971,180 @@ i:[
 "Earphones and power banks",
 "Retail and bulk enquiries"
 ]
-}
+},
+{
+n:"Yoga & Wellness",
+c:"Health",
+k:"yoga",
+s:"Yoga classes and guided wellness sessions.",
+l:"Enquire about yoga batches, session timings and suitable programmes.",
+i:["Group yoga classes","Personal yoga sessions","Beginner-friendly batches","Wellness and flexibility practice"]
+},
+{
+n:"Software Development",
+c:"Business",
+k:"software,laptop",
+s:"Custom software and website development services.",
+l:"Discuss your business requirement, website, application or software idea with a development provider.",
+i:["Website development","Custom business software","Web and mobile applications","Maintenance and technical support"]
+},
+{
+n:"Blood Bank",
+c:"Health",
+k:"blood",
+s:"Blood bank enquiries and donor coordination assistance.",
+l:"Contact HK Hub to make an enquiry about blood requirements or donor coordination. Blood group, stock and availability must be confirmed directly with the relevant blood bank.",
+i:["Blood requirement enquiries","Blood group and component enquiries","Donor coordination","Direct confirmation with the blood bank"]
+},
+{
+n:"Social Media Marketing",
+c:"Business",
+k:"billboard,smartphone",
+s:"Social media page handling and digital promotion.",
+l:"Get help managing your business social pages and promoting products, services or offers online.",
+i:["Social media page management","Posts, reels and content planning","Business page promotion","Campaign and engagement support"]
+},
+{
+n:"Makeup Artist",
+c:"Beauty",
+k:"makeup,bride",
+s:"Makeup services for weddings, functions and occasions.",
+l:"Enquire about makeup artists for your event. Share the occasion, date, venue and preferred style.",
+i:["Bridal and wedding makeup","Engagement and reception makeup","Party and occasion makeup","Makeup trial enquiries"]
+},
+{
+    n:"Mehendi Artist",
+    c:"Beauty",
+    k:"mehendilocal",
+    s:"Mehendi application for weddings and celebrations.",
+    l:"Find mehendi artists for bridal, family and function bookings.",
+    i:[
+        "Bridal mehendi",
+        "Family and guest mehendi",
+        "Haldi and function bookings",
+        "Design and appointment enquiries"
+    ]
+},
+{
+n:"Water Bottles, Cold Drinks & Custom Branding",
+c:"Food",
+k:"water,indian",
+s:"Bottled water, cold drinks and customized branded bottle labels for businesses and events.",
+l:"Enquire about bottled drinking water and cold drinks for personal use, shops, gatherings or events. Customized stickers and labels can feature your business name, logo or event branding. Ask the provider about brands, quantities, delivery and customization options.",
+i:["Bottled drinking water and chilled water bottles","Cold drinks and soft drinks","Bulk and function orders","Business-branded bottle labels","Custom logo stickers","Wedding and event bottle labels","Bulk customization enquiries"]
+},
+{
+n:"Handmade Products, Rangoli Mats & Bags",
+c:"Arts",
+k:"handmade,jewellery",
+s:"Handmade and ready-made jewellery, bags and rangoli mats, available for sale or rent where applicable.",
+l:"Explore handmade and ready-made products, including jewellery, bags and rangoli mats. Enquire about designs, sizes, custom orders, and which bags or rangoli mats are available for rent or sale. Rental dates, availability and charges require provider confirmation.",
+i:["Handmade jewellery and creative products","Handmade and ready-made bags","Rangoli mats","Bags and rangoli mats for rent or sale","Custom product enquiries","Availability and pricing enquiries"]
+},
+{
+n:"Jewellery Making Classes",
+c:"Education",
+k:"jewellery,classroom",
+s:"Classes to learn handmade jewellery making.",
+l:"Ask about jewellery-making batches, course content, materials and class timings.",
+i:["Beginner jewellery-making classes","Design and crafting techniques","Materials and tools guidance","Batch and fee enquiries"]
+},
+{
+n:"Photography & Shoots",
+c:"Events",
+k:"photography,filming",
+s:"Photography and themed shoots for functions and portfolios.",
+l:"Enquire about photographers for mehendi, haldi and model shoots. Share the date, location and type of shoot.",
+i:["Mehendi shoots","Haldi shoots","Model and portfolio shoots","Event photography enquiries"]
+},
+{
+n:"Dress Rental",
+c:"Beauty",
+k:"dress,bride",
+s:"Dresses and occasion outfits available on rent.",
+l:"Ask about outfit styles, sizes, rental dates, deposits and charges. Availability is subject to provider confirmation.",
+i:["Wedding and function outfits","Traditional and occasion wear","Size and date enquiries","Rental terms and charges"]
+},
+{
+n:"Nail Art & Classes",
+c:"Beauty",
+k:"nails",
+s:"Nail art services, products and learning classes.",
+l:"Enquire about nail art designs, nail products for sale and classes for beginners or learners.",
+i:["Nail art services and designs","Nail art products for sale","Beginner nail art classes","Batch and appointment enquiries"]
+},
+{
+n:"Band, DJ & Musical Teams",
+c:"Events",
+k:"music,stage",
+s:"Bands, DJs and musical teams for functions.",
+l:"Find music and entertainment teams for weddings, celebrations and other events. Share the date, venue and event type.",
+i:["DJ services","Live bands and musical groups","Traditional and function music teams","Event date and booking enquiries"]
+},
+{
+n:"Pheta Tying",
+c:"Events",
+k:"wedding,stage",
+s:"Pheta tying for wedding functions.",
+l:"Enquire about traditional pheta tying for the groom, family members and guests at wedding functions.",
+i:["Groom pheta tying","Family and guest pheta tying","Wedding and traditional functions","Group booking enquiries"]
+},
+{
+n:"Furniture",
+c:"Home",
+k:"furniture,interior",
+s:"Furniture sales and related enquiries.",
+l:"Ask about furniture requirements for homes, offices or shops, including available designs and sizes.",
+i:["Home furniture","Office and shop furniture","New furniture enquiries","Size, design and delivery enquiries"]
+},
+{
+n:"Painting Services",
+c:"Home",
+k:"painter,interior",
+s:"Painters for homes, shops and other properties.",
+l:"Enquire about painting work and share the property type, approximate area and required finish.",
+i:["Interior painting","Exterior painting","Shop and office painting","Repainting and touch-ups"]
+},
+{
+n:"Centering – Material & Labour",
+c:"Home",
+k:"centering,construction",
+s:"Construction centering material and labour services.",
+l:"Enquire about both centering or shuttering material and the labour required for construction work. Share the site location, project details and dates.",
+i:["Centering and shuttering material","Centering labour","Material with labour arrangements","Site and project enquiries"]
+},
+{
+n:"Local Transport – Chhota Hatti & Rickshaw",
+c:"Transport",
+k:"rickshaw,bus",
+s:"Local transport using Chhota Hatti vehicles and rickshaws.",
+l:"Enquire about local goods transport or rickshaw services. Share pickup, destination, date and load or passenger details.",
+i:["Chhota Hatti goods transport","Rickshaw services","Local pickup and drop","Availability and fare enquiries"]
+},
+{
+n:"Dance Classes",
+c:"Education",
+k:"dance,classroom",
+s:"Dance classes for learners and enthusiasts.",
+l:"Ask about dance styles, age groups, batch timings and class fees.",
+i:["Beginner dance classes","Dance practice and training","Group batches","Timing and fee enquiries"]
+},
+{
+n:"Music Classes",
+c:"Education",
+k:"music,classroom",
+s:"Music lessons and training classes.",
+l:"Enquire about music lessons, instruments or vocal training, batch timings and fees.",
+i:["Vocal music classes","Instrument learning enquiries","Beginner music lessons","Batch and fee details"]
+} 
 ];
 /* ============================================================
 HERO IMAGE REELS
 ============================================================ */
 const HERO = [
 ["wedding,decoration","Celebrations","Events"],
-["bus,travel","Travel","Travel"],
-["hotel,room","Hotels","Travel"],
+["bus,travel","Travel","Transport"],
+["hotel,room","Hotels","Transport"],
 ["classroom,students","Classes","Education"],
 ["carwash","Car Care","Home"],
 ["interior,livingroom","Home Decor","Home"],
@@ -2287,6 +2507,8 @@ element.classList.add("in");
 INITIALIZE WEBSITE
 ============================================================ */
 $("year").textContent = new Date().getFullYear();
+$("serviceCountHero").textContent = SERVICES.length;
+$("serviceCountButton").textContent = SERVICES.length + " Services";
 buildFilters();
 renderServices();
 </script>
