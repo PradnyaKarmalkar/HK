@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050f24">
+<meta name="description" content="HK HUB – All In One Station, Ganesh Talav, Miraj. service listings. One enquiry, the right service.">
+<title>HK Hub In One Station, Miraj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+--navy-900:#050f24;
+--navy-800:#081a3b;
+--navy-700:#0d2a5c;
+--royal:#1650a8;
+--gold:#f6b93b;
+--gold-soft:#ffd978;
+--ink:#14213d;
+--muted:#5b6b86;
+--paper:#f4f6fb;
+--card:#fff;
+--line:#e2e8f2;
+--font-display:'Sora',sans-serif;
+--font-body:'DM Sans',sans-serif;
+--radius:18px;
+--shadow:0 10px 30px rgba(8,26,59,.10);
+}
+* {
+box-sizing:border-box;
+}
+html {
+scroll-behavior:smooth;
+scroll-padding-top:84px;
+}
+body {
+margin:0;
+font-family:var(--font-body);
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+img {
+max-width:100%;
+display:block;
+}
+a {
+color:inherit;
+text-decoration:none;
+}
+button,input,select,textarea {
+font:inherit;
+}
+button {
+cursor:pointer;
+}
+:focus-visible {
+outline:3px solid var(--gold);
+outline-offset:3px;
+}
+.wrap {
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+.eyebrow {
+font-size:12px;
+font-weight:700;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:var(--gold);
+}
+.eyebrow.dark {
+color:var(--royal);
+}
+h1,h2,h3,h4 {
+font-family:var(--font-display);
+margin:0;
+line-height:1.15;
+}
+/* BUTTONS */
+.btn {
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+border:0;
+border-radius:12px;
+padding:13px 20px;
+font-weight:700;
+background:linear-gradient(135deg,var(--gold-soft),var(--gold));
+color:#1b2640;
+box-shadow:0 8px 20px rgba(246,185,59,.28);
+transition:.25s;
+}
+.btn:hover {
+transform:translateY(-2px);
+}
+.btn-ghost {
+background:rgba(255,255,255,.08);
+color:white;
+border:1px solid rgba(255,255,255,.35);
+box-shadow:none;
+}
+.btn-wa {
+background:#1fa855;
+color:white;
+}
+.btn-line {
+background:white;
+border:1px solid var(--line);
+color:var(--navy-700);
+box-shadow:none;
+}
+.full {
+width:100%;
+}
+/* TOP BAR */
+.topbar {
+background:var(--navy-900);
+color:#c9d6ec;
+font-size:13px;
+}
+.topbar .wrap {
+display:flex;
+justify-content:space-between;
+gap:8px 20px;
+flex-wrap:wrap;
+padding-top:8px;
+padding-bottom:8px;
+}
+/* HEADER */
+header {
+position:sticky;
+top:0;
+z-index:50;
+background:rgba(8,26,59,.94);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+header.scrolled {
+box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+.nav {
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:16px;
+padding-top:12px;
+padding-bottom:12px;
+}
+.brand {
+display:flex;
+align-items:center;
+gap:12px;
+color:white;
+}
+.brand-logo {
+width:46px;
+height:46px;
+display:grid;
+place-items:center;
+background:linear-gradient(135deg,#ffe29a,#f0a21b);
+color:#071a3a;
+font-family:var(--font-display);
+font-size:22px;
+font-weight:800;
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+}
+.brand b {
+display:block;
+font-family:var(--font-display);
+font-size:22px;
+line-height:1;
+}
+.brand b i {
+font-style:normal;
+color:var(--gold);
+}
+.brand small {
+display:block;
+font-size:9px;
+letter-spacing:.28em;
+color:var(--gold-soft);
+margin-top:5px;
+font-weight:700;
+}
+nav.links {
+display:flex;
+align-items:center;
+gap:26px;
+font-size:14.5px;
+color:#dbe6f8;
+}
+nav.links a:hover {
+color:var(--gold);
+}
+.nav-right {
+display:flex;
+align-items:center;
+gap:10px;
+}
+.menu {
+display:none;
+width:44px;
+height:44px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,.3);
+background:transparent;
+color:white;
+font-size:24px;
+}
+/* HERO */
+.hero {
+position:relative;
+overflow:hidden;
+isolation:isolate;
+color:white;
+background:var(--navy-900);
+min-height:590px;
+}
+.reels {
+position:absolute;
+inset:0;
+z-index:-2;
+display:flex;
+flex-direction:column;
+gap:14px;
+padding:14px 0;
+}
+.reel {
+flex:1;
+min-height:0;
+overflow:hidden;
+}
+.reel-track {
+display:flex;
+gap:14px;
+height:100%;
+width:max-content;
+animation:rtl 85s linear infinite;
+}
+.reel.r2 .reel-track {
+animation-duration:100s;
+animation-delay:-30s;
+}
+@keyframes rtl {
+from {transform:translateX(0)}
+to {transform:translateX(-50%)}
+}
+.tile {
+flex:none;
+width:clamp(230px,26vw,340px);
+height:100%;
+border-radius:20px;
+overflow:hidden;
+background-color:var(--navy-800);
+background-size:cover;
+background-position:center;
+position:relative;
+}
+.tile span {
+position:absolute;
+left:12px;
+bottom:10px;
+font-size:12px;
+font-weight:700;
+background:rgba(5,15,36,.75);
+padding:5px 12px;
+border-radius:30px;
+color:white;
+}
+.hero::before {
+content:"";
+position:absolute;
+inset:0;
+z-index:-1;
+background:
+linear-gradient(90deg,rgba(5,15,36,.97),rgba(5,15,36,.85) 45%,rgba(5,15,36,.50)),
+linear-gradient(0deg,rgba(5,15,36,.85),transparent);
+}
+.hero-grid {
+display:grid;
+grid-template-columns:1.25fr .75fr;
+gap:40px;
+align-items:center;
+padding-top:84px;
+padding-bottom:88px;
+}
+.pill {
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:7px 14px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.22);
+background:rgba(255,255,255,.07);
+font-size:13px;
+color:var(--gold-soft);
+}
+.pill i {
+width:8px;
+height:8px;
+border-radius:50%;
+background:#3ddc84;
+}
+.hero h1 {
+font-size:clamp(38px,6vw,68px);
+letter-spacing:-.03em;
+margin:20px 0;
+}
+.hero h1 span {
+background:linear-gradient(90deg,var(--gold-soft),var(--gold),#ff9f5a);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+.hero p.lead {
+font-size:18px;
+color:#d3dff2;
+max-width:600px;
+margin:0;
+}
+.hero-actions {
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+.hero-trust {
+display:flex;
+gap:10px 24px;
+flex-wrap:wrap;
+margin-top:34px;
+font-size:13.5px;
+color:#b9c9e3;
+}
+.hero-trust b {
+color:white;
+font-family:var(--font-display);
+}
+.finder {
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.22);
+border-radius:24px;
+padding:26px;
+backdrop-filter:blur(16px);
+box-shadow:0 30px 70px rgba(0,0,0,.35);
+}
+.finder h2 {
+font-size:24px;
+margin:6px 0;
+}
+.finder p {
+margin:0 0 16px;
+color:#cfdcf1;
+font-size:14px;
+}
+.finder input {
+width:100%;
+padding:14px 16px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,.3);
+background:rgba(5,15,36,.55);
+color:white;
+margin-bottom:12px;
+}
+.finder input::placeholder {
+color:#9fb2d2;
+}
+.chips {
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:16px;
+}
+.chips button {
+border:1px solid rgba(255,255,255,.25);
+background:rgba(255,255,255,.08);
+color:#e8f0fd;
+border-radius:30px;
+padding:7px 13px;
+font-size:13px;
+}
+.chips button:hover {
+background:var(--gold);
+color:#1b2640;
+}
+/* SECTIONS */
+section.block {
+padding:84px 0;
+}
+.head {
+text-align:center;
+max-width:680px;
+margin:0 auto 38px;
+}
+.head h2 {
+font-size:clamp(28px,4.2vw,44px);
+margin:10px 0 12px;
+color:var(--navy-800);
+}
+.head p {
+margin:0;
+color:var(--muted);
+font-size:17px;
+}
+/* SERVICES */
+.toolbar {
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:18px;
+margin-bottom:30px;
+}
+.search {
+width:100%;
+max-width:640px;
+}
+.search input {
+width:100%;
+padding:16px 18px;
+border-radius:14px;
+border:1px solid var(--line);
+background:white;
+box-shadow:var(--shadow);
+}
+.filters {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:8px;
+}
+.filter {
+border:1px solid var(--line);
+background:white;
+color:#3b4a66;
+padding:9px 15px;
+border-radius:30px;
+font-size:14px;
+}
+.filter small {
+opacity:.6;
+margin-left:4px;
+}
+.filter.active {
+background:var(--navy-800);
+color:white;
+border-color:var(--navy-800);
+}
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+gap:18px;
+}
+.card {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+min-height:290px;
+border-radius:var(--radius);
+overflow:hidden;
+border:0;
+padding:0;
+text-align:left;
+color:white;
+background-color:var(--navy-800);
+background-size:cover;
+background-position:center;
+box-shadow:var(--shadow);
+transition:transform .35s,box-shadow .35s;
+animation:pop .5s both;
+}
+@keyframes pop {
+from {opacity:0;transform:translateY(16px)}
+to {opacity:1;transform:none}
+}
+.card::after {
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+0deg,
+rgba(5,15,36,.97) 0%,
+rgba(5,15,36,.70) 48%,
+rgba(5,15,36,.05) 100%
+);
+}
+.card:hover {
+transform:translateY(-6px);
+box-shadow:0 22px 44px rgba(8,26,59,.24);
+}
+.card .tag {
+position:absolute;
+z-index:2;
+top:14px;
+left:14px;
+font-size:11px;
+font-weight:700;
+padding:5px 10px;
+border-radius:30px;
+background:rgba(255,255,255,.2);
+border:1px solid rgba(255,255,255,.25);
+}
+.card .txt {
+position:relative;
+z-index:2;
+padding:20px;
+}
+.card h3 {
+font-size:19px;
+margin-bottom:7px;
+}
+.card p {
+margin:0 0 14px;
+font-size:13.5px;
+line-height:1.5;
+color:#d6e1f3;
+}
+.card .more {
+display:inline-flex;
+gap:6px;
+font-size:13px;
+font-weight:700;
+color:var(--gold-soft);
+}
+.empty {
+display:none;
+text-align:center;
+padding:40px 10px;
+color:var(--muted);
+}
+/* HOW IT WORKS */
+.band {
+background:linear-gradient(180deg,#e9f0fb,#f4f6fb);
+}
+.steps {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+.step {
+background:white;
+border-radius:var(--radius);
+padding:28px;
+box-shadow:var(--shadow);
+}
+.step h3 {
+font-size:20px;
+margin-bottom:8px;
+color:var(--navy-800);
+}
+.step p {
+margin:0;
+color:var(--muted);
+font-size:15px;
+}
+.step-number {
+display:grid;
+place-items:center;
+width:42px;
+height:42px;
+border-radius:50%;
+background:var(--navy-800);
+color:var(--gold);
+font-weight:800;
+margin-bottom:16px;
+font-family:var(--font-display);
+}
+.why {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:20px;
+}
+.why div {
+padding:24px;
+border-radius:var(--radius);
+background:var(--navy-800);
+color:white;
+}
+.why h3 {
+font-size:18px;
+color:var(--gold-soft);
+margin-bottom:8px;
+}
+.why p {
+margin:0;
+color:#c6d4ec;
+font-size:14.5px;
+}
+/* FORMS */
+.forms {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:22px;
+align-items:start;
+}
+.panel {
+background:white;
+border:1px solid var(--line);
+border-radius:22px;
+padding:28px;
+box-shadow:var(--shadow);
+}
+.panel h3 {
+font-size:23px;
+color:var(--navy-800);
+margin-bottom:6px;
+}
+.panel>p {
+margin:0 0 14px;
+color:var(--muted);
+font-size:14px;
+}
+.field {
+margin:14px 0;
+}
+.field label {
+display:block;
+font-size:13px;
+font-weight:700;
+margin-bottom:6px;
+color:#34425e;
+}
+.field input,
+.field select,
+.field textarea {
+width:100%;
+padding:13px 14px;
+border:1px solid var(--line);
+border-radius:12px;
+background:white;
+}
+.field textarea {
+min-height:96px;
+resize:vertical;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+border-color:var(--royal);
+outline:2px solid rgba(22,80,168,.15);
+}
+.notice {
+font-size:12px;
+color:#7a879c;
+margin-top:12px;
+}
+/* CONTACT */
+.contact {
+background:linear-gradient(120deg,var(--navy-900),var(--navy-700));
+color:white;
+}
+.contact .wrap {
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:28px;
+padding-top:64px;
+padding-bottom:64px;
+}
+.contact h2 {
+font-size:clamp(28px,4vw,40px);
+margin:10px 0 12px;
+}
+.contact p {
+margin:4px 0;
+color:#d3dff2;
+}
+.contact-actions {
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+/* FOOTER */
+footer {
+background:var(--navy-900);
+color:#9fb0cc;
+font-size:13.5px;
+}
+footer .wrap {
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:10px 20px;
+padding-top:22px;
+padding-bottom:22px;
+}
+footer .dev {
+color:white;
+}
+footer .dev b {
+color:var(--gold);
+font-family:var(--font-display);
+}
+
+/* WHATSAPP BUTTON */
+.fab {
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:40;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#1fa855;
+display:grid;
+place-items:center;
+box-shadow:0 10px 26px rgba(31,168,85,.5);
+color:white;
+font-size:25px;
+font-weight:700;
+}
+.fab:hover {
+transform:scale(1.08);
+}
+/* MODAL */
+.modal {
+position:fixed;
+inset:0;
+z-index:100;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+.modal[hidden] {
+display:none;
+}
+.modal .bd {
+position:absolute;
+inset:0;
+background:rgba(3,10,26,.75);
+backdrop-filter:blur(6px);
+}
+.sheet {
+position:relative;
+width:min(720px,100%);
+max-height:calc(100dvh - 40px);
+overflow:auto;
+background:white;
+border-radius:26px;
+box-shadow:0 40px 90px rgba(0,0,0,.5);
+transform:translateY(20px);
+opacity:0;
+transition:.3s;
+}
+.modal.open .sheet {
+transform:none;
+opacity:1;
+}
+.m-media {
+position:relative;
+height:250px;
+background-color:var(--navy-800);
+background-size:cover;
+background-position:center;
+}
+.m-media::after {
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(0deg,rgba(5,15,36,.8),transparent 70%);
+}
+.m-media .tag {
+position:absolute;
+z-index:2;
+left:24px;
+bottom:18px;
+font-size:11px;
+font-weight:700;
+color:white;
+padding:6px 12px;
+border-radius:30px;
+background:rgba(255,255,255,.2);
+}
+.x {
+position:absolute;
+z-index:5;
+top:14px;
+right:14px;
+width:42px;
+height:42px;
+border-radius:50%;
+border:0;
+background:white;
+color:var(--navy-800);
+font-size:24px;
+cursor:pointer;
+}
+.m-body {
+padding:26px 28px 30px;
+}
+.m-body h3 {
+font-size:clamp(24px,4vw,32px);
+color:var(--navy-800);
+}
+.m-body p {
+color:#44526d;
+margin:12px 0 0;
+}
+.m-body h4 {
+margin:22px 0 10px;
+font-size:13px;
+letter-spacing:.14em;
+text-transform:uppercase;
+color:var(--royal);
+}
+.m-list {
+list-style:none;
+margin:0;
+padding:0;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+.m-list li {
+padding:11px 13px;
+border-radius:12px;
+background:#f1f5fc;
+font-size:14px;
+}
+.m-list li::before {
+content:"✓";
+margin-right:8px;
+color:#16834c;
+font-weight:800;
+}
+.m-note {
+font-size:12.5px;
+color:#7a879c!important;
+margin-top:16px!important;
+}
+.m-actions {
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:22px;
+}
+.m-actions .btn {
+flex:1 1 170px;
+}
+body.lock {
+overflow:hidden;
+}
+/* REVEAL */
+.js .reveal {
+opacity:0;
+transform:translateY(26px);
+transition:opacity .7s,transform .7s;
+}
+.js .reveal.in {
+opacity:1;
+transform:none;
+}
+/* RESPONSIVE */
+@media(max-width:980px) {
+.hero-grid {
+grid-template-columns:1fr;
+padding-top:60px;
+padding-bottom:64px;
+}
+.finder {
+max-width:520px;
+}
+.steps,.why {
+grid-template-columns:1fr;
+}
+.forms {
+grid-template-columns:1fr;
+}
+.menu {
+display:inline-flex;
+align-items:center;
+justify-content:center;
+}
+nav.links {
+position:absolute;
+left:0;
+right:0;
+top:100%;
+flex-direction:column;
+align-items:flex-start;
+gap:0;
+background:var(--navy-800);
+padding:8px 20px 18px;
+display:none;
+}
+nav.links.open {
+display:flex;
+}
+nav.links a {
+width:100%;
+padding:14px 0;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-cta {
+display:none;
+}
+}
+@media(max-width:600px) {
+section.block {
+padding:58px 0;
+}
+.brand b {
+font-size:19px;
+}
+.brand-logo {
+width:40px;
+height:40px;
+}
+.topbar .wrap {
+justify-content:center;
+text-align:center;
+}
+.hero::before {
+background:linear-gradient(0deg,rgba(5,15,36,.96),rgba(5,15,36,.82));
+}
+.hero-actions .btn {
+flex:1 1 100%;
+}
+.grid {
+grid-template-columns:1fr;
+}
+.card {
+min-height:260px;
+}
+/*
+MOBILE ONLY: manually swipe/scroll the service cards horizontally.
+No auto-scroll or duplicated cards. Tablet and desktop are unchanged.
+*/
+#services .wrap {
+overflow:visible;
+}
+#serviceGrid {
+display:flex;
+flex-wrap:nowrap;
+width:100%;
+max-width:100%;
+gap:16px;
+overflow-x:auto;
+overflow-y:hidden;
+padding:0 0 12px;
+scroll-snap-type:none;
+scroll-behavior:auto;
+-webkit-overflow-scrolling:touch;
+overscroll-behavior-x:contain;
+touch-action:pan-x pan-y;
+scrollbar-width:none;
+cursor:grab;
+}
+#serviceGrid::-webkit-scrollbar {
+display:none;
+}
+#serviceGrid:active {
+cursor:grabbing;
+}
+#serviceGrid .card {
+flex:0 0 78vw;
+width:78vw;
+max-width:340px;
+min-height:250px;
+margin:0;
+scroll-snap-align:none;
+}
+.panel {
+padding:22px;
+}
+.modal {
+align-items:flex-end;
+padding:0;
+}
+.sheet {
+border-radius:26px 26px 0 0;
+max-height:92dvh;
+}
+.m-media {
+height:200px;
+}
+.m-body {
+padding:22px 20px 26px;
+}
+.m-list {
+grid-template-columns:1fr;
+}
+
+/* CONTACT BUTTONS - MOBILE SIDE BY SIDE */
+@media (max-width: 600px) {
+
+    .contact-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .contact-actions .btn {
+        width: 100%;
+        min-width: 0;
+        padding: 13px 8px;
+        font-size: 13px;
+        text-align: center;
+        white-space: normal;
+        justify-content: center;
+        line-height: 1.3;
+    }
+
+}
+
+footer .wrap {
+justify-content:center;
+text-align:center;
+}
+.fab {
+width:47px;
+height:47px;
+right:14px;
+bottom:14px;
+}
+
+/* COMPACT MOBILE SERVICE FILTERS */
+@media(max-width:600px) {
+
+  #services .toolbar {
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: stretch;
+  }
+
+  #services .search {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #services .search input {
+    padding: 13px 15px;
+    font-size: 14px;
+  }
+
+  /* Single horizontal scrolling row */
+  #services .filters {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 2px 0 8px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+  }
+
+  #services .filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Compact category pills */
+  #services .filter {
+    flex: 0 0 auto;
+    white-space: nowrap;
+
+    padding: 9px 14px;
+    font-size: 13px;
+    line-height: 1.3;
+
+    border-radius: 30px;
+  }
+
+  #services .filter small {
+    font-size: 11px;
+    margin-left: 3px;
+  }
+
+}
+
+}
+@media(prefers-reduced-motion:reduce) {
+*,
+*::before,
+*::after {
+animation:none!important;
+transition:none!important;
+scroll-behavior:auto!important;
+}
+.js .reveal {
+opacity:1;
+transform:none;
+}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+<div class="wrap">
+<span>Ganesh Talav, Miraj</span>
+<span>
+<a href="tel:+9195796 33643">+91 95796 33643</a>
+&nbsp;·&nbsp; Your one-stop service destination
+</span>
+</div>
+</div>
+<header id="top">
+<div class="wrap nav">
+<a class="brand" href="#home">
+<div class="brand-logo">HK</div>
+<span>
+<b>HK <i>Hub</i></b>
+<small>ALL IN ONE STATION</small>
+</span>
+</a>
+<nav class="links" id="links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#how">How It Works</a>
+<a href="#register">Enquire</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="nav-right">
+<a class="btn nav-cta" href="#register">Send Enquiry</a>
+<button class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+</div>
+</div>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="reels" aria-hidden="true">
+<div class="reel">
+<div class="reel-track" id="reel1"></div>
+</div>
+<div class="reel r2">
+<div class="reel-track" id="reel2"></div>
+</div>
+</div>
+<div class="wrap hero-grid">
+<div>
+<span class="pill">
+<i></i>
+Open for enquiries · Ganesh Talav, Miraj
+</span>
+<h1>
+Every need.
+<span>One station.</span>
+</h1>
+<p class="lead">
+Weddings to workshops, classes to car care,
+jobs to loans. Tell HK Hub what you are
+looking for and we will point you to the right service.
+</p>
+<div class="hero-actions">
+<a class="btn" href="#services">Browse <span id="serviceCountButton">Services</span> →</a>
+<a class="btn btn-ghost"
+href="https://wa.me/919579633643?text=Hello%20HK%20Hub"
+target="_blank" rel="noopener">
+Chat on WhatsApp
+</a>
+</div>
+<div class="hero-trust">
+<span><b id="serviceCountHero">0</b> service listings</span>
+<span><b>1</b> simple enquiry</span>
+<span><b>Call</b> · <b>WhatsApp</b> · <b>Form</b></span>
+</div>
+</div>
+<form class="finder" id="finder">
+<div class="eyebrow">Quick finder</div>
+<h2>What do you need today?</h2>
+<p>Type a service and jump straight to it.</p>
+<input
+id="heroSearch"
+type="search"
+placeholder="e.g. car wash, classes, hotel"
+aria-label="Search services"
+>
+<button class="btn full" type="submit">
+Find my service
+</button>
+<div class="chips" id="chips"></div>
+</form>
+</div>
+</section>
+<!-- SERVICES -->
+<section class="block" id="services">
+<div class="wrap">
+<div class="head reveal">
+<div class="eyebrow dark">What we offer</div>
+<h2>FourtyNine services, one doorway</h2>
+<p>Tap any card to see what it covers, then enquire in a few seconds.</p>
+</div>
+<div class="toolbar reveal">
+<label class="search">
+<input
+id="search"
+type="search"
+placeholder="Search services, e.g. laptop, wedding, repair"
+aria-label="Search services"
+>
+</label>
+<div class="filters" id="filters"></div>
+</div>
+<div class="grid" id="serviceGrid"></div>
+<div class="empty" id="empty">
+No service matches that search.
+<a href="#register" style="color:var(--royal);font-weight:700">
+Send us your requirement
+</a>.
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section class="block band" id="how">
+<div class="wrap">
+<div class="head reveal">
+<div class="eyebrow dark">Simple by design</div>
+<h2>From "I need…" to done in three steps</h2>
+<p>No long forms, no running around.</p>
+</div>
+<div class="steps">
+<div class="step reveal">
+<div class="step-number">1</div>
+<h3>Pick a service</h3>
+<p>Browse the categories or search for exactly what you need.</p>
+</div>
+<div class="step reveal">
+<div class="step-number">2</div>
+<h3>Tell us your requirement</h3>
+<p>Send a quick enquiry by WhatsApp, phone or the form below.</p>
+</div>
+<div class="step reveal">
+<div class="step-number">3</div>
+<h3>We connect you</h3>
+<p>HK Hub directs your enquiry to the relevant service or provider.</p>
+</div>
+</div>
+<div class="why">
+<div class="reveal">
+<h3>Everything in one place</h3>
+<p>Celebrations, travel, education, vehicles, home and work, all under one roof.</p>
+</div>
+<div class="reveal">
+<h3>Local and reachable</h3>
+<p>Based at Ganesh Talav, Miraj. Call or message us directly.</p>
+</div>
+<div class="reveal">
+<h3>For customers and providers</h3>
+<p>Looking for a service or offering one? Both are welcome here.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- REGISTRATION AND ENQUIRY -->
+<section class="block" id="register">
+<div class="wrap">
+<div class="head reveal">
+<div class="eyebrow dark">Get in touch</div>
+<h2>Tell us what you need</h2>
+<p>Customers and service providers can both reach HK Hub from here.</p>
+</div>
+<div class="forms">
+<!-- REGISTRATION FORM -->
+<form class="panel reveal" id="regForm">
+<h3>Customer / Provider Registration</h3>
+<p>
+Share your details and the service you need or offer.
+Submitting opens WhatsApp so you can review and send.
+</p>
+<div class="field">
+<label for="rname">Full name *</label>
+<input id="rname" required placeholder="Your name" autocomplete="name">
+</div>
+<div class="field">
+<label for="rphone">Mobile number *</label>
+<input
+id="rphone"
+required
+type="tel"
+inputmode="tel"
+pattern="[0-9+ ()\-]{8,18}"
+placeholder="Your contact number"
+>
+</div>
+<div class="field">
+<label for="rtype">I am a *</label>
+<select id="rtype">
+<option>Customer</option>
+<option>Service Provider</option>
+<option>Business Owner</option>
+<option>Job Seeker</option>
+</select>
+</div>
+<div class="field">
+<label for="rservice">Service category *</label>
+<select id="rservice" required>
+<option value="">Choose a service</option>
+</select>
+</div>
+<div class="field">
+<label for="rmessage">Details</label>
+<textarea id="rmessage"
+placeholder="What do you need, or what service do you provide?"></textarea>
+</div>
+<button class="btn btn-wa full" type="submit">
+Continue on WhatsApp
+</button>
+<div class="notice">
+Nothing is stored on this website. Your message opens in WhatsApp for you to check and send.
+</div>
+</form>
+<!-- QUICK ENQUIRY FORM -->
+<form class="panel reveal" id="enqForm">
+<h3>Quick Service Enquiry</h3>
+<p>Short on time? Pick a service and describe your requirement.</p>
+<div class="field">
+<label for="ename">Your name *</label>
+<input id="ename" required placeholder="Your name">
+</div>
+<div class="field">
+<label for="eservice">Service *</label>
+<select id="eservice" required>
+<option value="">Choose a service</option>
+</select>
+</div>
+<div class="field">
+<label for="ecity">Your area / city</label>
+<input id="ecity" placeholder="e.g. Miraj">
+</div>
+<div class="field">
+<label for="edetails">Requirement *</label>
+<textarea id="edetails" required
+placeholder="Describe what you are looking for"></textarea>
+</div>
+<button class="btn btn-wa full" type="submit">
+Send Enquiry on WhatsApp
+</button>
+<div class="notice">
+Please never share bank passwords, OTPs or other confidential details.
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="wrap">
+<div>
+<div class="eyebrow">Let's connect</div>
+<h2>HK Hub · All In One Station</h2>
+<p>
+<a href="tel:+919579633643">+91 95796 33643</a>
+</p>
+<p>Ganesh Talav, Miraj</p>
+<p>Connect • Collaborate • Grow</p>
+</div>
+<div class="contact-actions">
+<a class="btn" href="tel:+919579633643">
+Call Now
+</a>
+<a class="btn btn-wa"
+href="https://wa.me/919579633643"
+target="_blank" rel="noopener">
+Chat on WhatsApp
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer>
+<div class="wrap">
+<span>
+© <span id="year"></span>
+HK Hub – All In One Station. All rights reserved.
+</span>
+<span class="dev">
+Developed by <b>Stackora</b>
+</span>
+</div>
+</footer>
+<!-- FLOATING WHATSAPP -->
+
+<a class="fab"
+   href="https://wa.me/919356788846?text=Hello%20HK%20Hub%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with HK Hub on WhatsApp">
+    W
+</a>
+
+<!-- SERVICE DETAILS MODAL -->
+<div class="modal" id="modal" hidden>
+<div class="bd" data-close></div>
+<div class="sheet" role="dialog" aria-modal="true"
+aria-labelledby="mTitle" tabindex="-1">
+<button class="x" data-close aria-label="Close details">×</button>
+<div class="m-media" id="mMedia">
+<span class="tag" id="mTag"></span>
+</div>
+<div class="m-body">
+<h3 id="mTitle"></h3>
+<p id="mLong"></p>
+<h4>What you can ask for</h4>
+<ul class="m-list" id="mList"></ul>
+<p class="m-note" id="mNote"></p>
+<div class="m-actions">
+<a class="btn btn-wa" id="mWa"
+href="#" target="_blank" rel="noopener">
+Enquire on WhatsApp
+</a>
+<a class="btn btn-line" href="tel:+919579633643">
+Call HK
+</a>
+<button class="btn btn-line" id="mForm" type="button">
+Use enquiry form
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+/* ============================================================
+CONFIGURATION
+============================================================ */
+const WA = "919579633643";
+const $ = id => document.getElementById(id);
+function wa(message) {
+const url = "https://wa.me/" + WA +
+"?text=" + encodeURIComponent(message);
+window.open(url, "_blank", "noopener");
+}
+/* ============================================================
+CATEGORY CONFIGURATION
+============================================================ */
+const CATS = {
+Events: {
+label:"Events & Lifestyle",
+g:"linear-gradient(135deg,#7a1f5c,#2b1055)"
+},
+Business: {
+label:"Business & Digital",
+g:"linear-gradient(135deg,#1650a8,#061633)"
+},
+Transport: {
+label:"Transport & Travel",
+g:"linear-gradient(135deg,#0b7a8c,#063b52)"
+},
+Education: {
+label:"Education & Classes",
+g:"linear-gradient(135deg,#5b3fb5,#1e1b5e)"
+},
+Home: {
+label:"Home & Property",
+g:"linear-gradient(135deg,#b4561b,#4a1f0a)"
+},
+Health: {
+label:"Health & Care",
+g:"linear-gradient(135deg,#0f7a5a,#073b2e)"
+},
+Beauty: {
+label:"Beauty & Fashion",
+g:"linear-gradient(135deg,#b83280,#4a1648)"
+},
+Arts: {
+label:"Arts & Handmade",
+g:"linear-gradient(135deg,#a65b18,#4c2b0c)"
+},
+Food: {
+label:"Food & Beverages",
+g:"linear-gradient(135deg,#b45309,#5b2607)"
+}
+};
+/* ============================================================
+IMAGE CONFIGURATION
+All images are CSS BACKGROUND IMAGES.
+No LoremFlickr.
+============================================================ */
+const PHOTO_MAP = {
+wedding: "photo-1519741497674-611481863552",
+security: "photo-1581092795360-fd1ca04f0952",
+filming: "photo-1492619375914-88005aa9e8fb",
+tea: "photo-1554118811-1e0d58224f24",
+home: "photo-1581578731548-c64695cc6952",
+interior: "photo-1600210492486-724fe5c67fb0",
+hotel: "photo-1566073771259-6a8506099945",
+apartment: "photo-1600596542815-ffad4c1539a9",
+bus: "photo-1570125909232-eb263c188f7e",
+bride: "photo-1532712938310-34cb3982ef74",
+stage: "photo-1501386761578-eac5c94b800a",
+laptop: "photo-1496181133206-80ce9b88a853",
+classroom: "photo-1509062522246-3755977927d7",
+construction: "photo-1504307651254-35680f356dfd",
+office: "photo-1497366754035-f200968a6e72",
+billboard: "photo-1497366811353-6870744d04b2",
+indian: "photo-1546069901-ba9599a7e63c",
+money: "photo-1579621970563-ebec7560ff3e",
+documents: "photo-1554224155-6726b3ff858f",
+labour: "photo-1521737711867-e3b97375f902",
+car: "photo-1492144534655-ae79c964c9d7",
+mechanic: "photo-1486262715619-67b85e0b08d3",
+laundry: "photo-1517677208171-0bc6725a3e60",
+carwash: "photo-1661501041641-3e731115e687",
+gym: "photo-1534438327276-14e5300c3a48",
+cleaning: "photo-1581578731548-c64695cc6952",
+appliances: "photo-1556911220-bff31c812dba",
+repair: "photo-1621905251189-0f4537c4a7a6",
+physiotherapy: "photo-1576091160399-112ba8d25d1d",
+shop: "photo-1441986300917-64674bd600d8",
+smartphone: "photo-1511707171634-5f897ff02aa9",
+yoga: "photo-1544367567-0f2fcb009e0b",
+software: "photo-1518770660439-4636190af475",
+blood: "photo-1579684385127-1ef15d508118",
+makeup: "photo-1522335789203-aabd1fc54bc9",
+mehendi: "photo-1590736969955-71cc94901144",
+water: "photo-1548839140-29a749e1cf4d",
+handmade: "photo-1452860606245-08befc0ff44b",
+jewellery: "photo-1617038220319-276d3cfab638",
+photography: "photo-1542038784456-1ea8e935640e",
+dress: "photo-1490481651871-ab68de25d43d",
+nails: "photo-1604654894610-df63bc536371",
+music: "photo-1507838153414-b4b713384a76",
+furniture: "photo-1555041469-a586c61ea9bc",
+painter: "photo-1562259949-e8e7689d7828",
+centering: "photo-1504307651254-35680f356dfd",
+rickshaw: "photo-1570125909232-eb263c188f7e",
+dance: "photo-1504609813442-a8924e83f76e"
+};
+
+/* Local images stored in your project folder (used instead of Unsplash) */
+const LOCAL_PHOTO_MAP = {
+carwashlocal: "Images/carwash.jpg",
+vadhuvarlocal: "Images/vaduvar.jpg",
+mehendilocal: "Images/mehendi.jpg"
+};
+
+/* Get Unsplash background URL */
+// function photo(keyword) {
+// const key = keyword.split(",")[0].trim();
+// const id = PHOTO_MAP[key] || PHOTO_MAP.office;
+// return `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=85`;
+// }
+
+function photo(keyword) {
+    const key = keyword.split(",")[0].trim();
+
+    if (LOCAL_PHOTO_MAP[key]) {
+        return LOCAL_PHOTO_MAP[key];
+    }
+
+    const id = PHOTO_MAP[key];
+
+    if (!id) {
+        console.warn("Image mapping missing for:", key);
+        return "";
+    }
+
+    return `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=85`;
+}
+/* Set CSS background image */
+function setPhotoBackground(element, keyword, category) {
+const image = photo(keyword);
+const gradient = CATS[category]?.g ||
+"linear-gradient(135deg,#0d2a5c,#050f24)";
+element.style.backgroundColor = "#081a3b";
+element.style.backgroundImage =
+`linear-gradient(0deg,rgba(5,15,36,.88),rgba(5,15,36,.12)),url("${image}"),${gradient}`;
+element.style.backgroundSize = "cover";
+element.style.backgroundPosition = "center";
+element.style.backgroundRepeat = "no-repeat";
+}
+/* ============================================================
+ALL SERVICE LISTINGS
+============================================================ */
+const SERVICES = [
+{
+n:"Functions",
+c:"Events",
+k:"wedding,decoration",
+s:"Weddings, baby showers, haldi and family celebrations.",
+l:"Planning a celebration takes many hands. Tell us the type of function, the date and a rough guest count, and we will point you towards people who can help with the details.",
+i:[
+"Wedding and engagement functions",
+"Baby shower and haldi ceremonies",
+"Birthday and family get-togethers",
+"Decor, catering and photography support"
+]
+},
+{
+n:"Bodyguards",
+c:"Events",
+k:"security,guard",
+s:"Personal and event security services.",
+l:"Need security for a function, a public appearance or day-to-day personal safety? Share the date, place and number of people involved.",
+i:[
+"Event and function security",
+"Personal protection",
+"Crowd and entry management",
+"Short-term or regular duty"
+]
+},
+{
+n:"Reelstar",
+c:"Business",
+k:"filming,smartphone",
+s:"Reel creators and short-video talent.",
+l:"Looking for someone to shoot reels for your brand or shop? Or are you a creator looking for work? Both can reach out here.",
+i:[
+"Reel and short-video creators",
+"Promotion videos for brands and shops",
+"Creators looking for collaborations",
+"Content for events and launches"
+]
+},
+{
+n:"Franchises",
+c:"Business",
+k:"tea,cafe",
+s:"Tea shop, clothing and other franchise opportunities.",
+l:"Thinking of starting a business with an established name? Ask about franchise opportunities and tell us your budget.",
+i:[
+"Tea shop franchises",
+"Clothing and retail franchises",
+"Other business opportunities",
+"Enquiries by budget and location"
+]
+},
+{
+n:"Home Decor",
+c:"Home",
+k:"interior,livingroom",
+s:"Home decoration and styling services.",
+l:"Give your home a fresh look. Share your space, style and budget.",
+i:[
+"Living room and bedroom styling",
+"Festival and occasion decoration",
+"Curtains, lighting and wall accents",
+"Ideas for new or renovated homes"
+]
+},
+{
+n:"Hotels",
+c:"Transport",
+k:"hotel,room",
+s:"Hotel and accommodation enquiries.",
+l:"Need a place to stay for your family, guests or a function? Tell us your dates and number of people.",
+i:[
+"Rooms for families and groups",
+"Stays for wedding and function guests",
+"Short and extended stays",
+"Budget to comfort options"
+]
+},
+{
+n:"Rental Stores / House / Flat",
+c:"Home",
+k:"apartment,house",
+s:"Find stores, houses and flats on rent.",
+l:"Searching for a place to live or run your business? Or have a property to rent out?",
+i:[
+"Flats and houses for rent",
+"Shops and commercial spaces",
+"Owners who want to list a property",
+"Help narrowing by budget and area"
+]
+},
+{
+n:"Travelers",
+c:"Transport",
+k:"bus,travel",
+s:"Bus, train, car, aeroplane and helicopter travel enquiries.",
+l:"From a local ride to a long trip, tell us where, when and how many people are travelling.",
+i:[
+"Bus and train travel",
+"Car and taxi hire",
+"Flight enquiries",
+"Helicopter travel for special occasions"
+]
+},
+{
+n:"Vadhuvar Suchak",
+c:"Events",
+k:"vadhuvarlocal",
+s:"Marriage matchmaking services.",
+l:"Looking for a suitable match for yourself or someone in your family?",
+i:[
+"Profiles for brides and grooms",
+"Family-to-family introductions",
+"Matches by community and preference",
+"Enquiries from families and individuals"
+]
+},
+{
+n:"Celebrity",
+c:"Events",
+k:"stage,concert",
+s:"Celebrity appearances and event enquiries.",
+l:"Want a special guest for your event? Tell us about the occasion, date and venue.",
+i:[
+"Guest appearances",
+"Chief guests for inaugurations",
+"Performers for events",
+"Booking enquiries"
+]
+},
+{
+n:"Electronics Items",
+c:"Business",
+k:"laptop,camera",
+s:"Camera, computer and laptop sales or enquiries.",
+l:"Buying or selling electronics? Ask about cameras, computers and laptops.",
+i:[
+"Laptops and computers",
+"Cameras",
+"Accessories and peripherals",
+"Sales and purchase enquiries"
+]
+},
+{
+n:"Classes",
+c:"Education",
+k:"classroom,students",
+s:"Class 1–12, degree, computer courses and IT courses.",
+l:"Whether it is school tuition, degree support or a skill course, tell us the subject and level.",
+i:[
+"School classes 1 to 12",
+"Degree courses",
+"Computer courses",
+"IT courses"
+]
+},
+{
+n:"Worker",
+c:"Business",
+k:"construction,worker",
+s:"Find workers for different types of work.",
+l:"Need hands for a job? Describe the work, location and duration.",
+i:[
+"Daily and contract workers",
+"Skilled and unskilled labour",
+"Work for homes, shops and sites",
+"Short and long-term needs"
+]
+},
+{
+n:"Jobs",
+c:"Business",
+k:"office,interview",
+s:"Job listings and employment enquiries.",
+l:"Looking for work, or looking to hire? Share your skills or your vacancy.",
+i:[
+"Openings from local employers",
+"Enquiries from job seekers",
+"Employers looking to hire",
+"Part-time and full-time roles"
+]
+},
+{
+n:"Advertisement / Marketing",
+c:"Business",
+k:"billboard,marketing",
+s:"Advertising, promotions and marketing services.",
+l:"Want more people to know about your shop or brand?",
+i:[
+"Banners and hoardings",
+"Social media promotion",
+"Local campaigns for shops",
+"Launch and event publicity"
+]
+},
+{
+n:"Mess",
+c:"Food",
+k:"indian,food",
+s:"Meal and mess service enquiries.",
+l:"Looking for daily meals away from home, or food for a group?",
+i:[
+"Daily meals",
+"Monthly mess enquiries",
+"Home-style food",
+"Bulk orders for groups"
+]
+},
+{
+n:"Loans",
+c:"Business",
+k:"money,finance",
+s:"Home, personal and car loans, insurance and finance enquiries.",
+l:"Tell us what you want to finance and we will point your enquiry in the right direction. Approval and terms are decided by the lender.",
+i:[
+"Home loans",
+"Personal loans",
+"Car loans",
+"Insurance and finance enquiries"
+]
+},
+{
+n:"Certificates",
+c:"Business",
+k:"documents,certificate",
+s:"Setu office and Social Welfare certificate assistance.",
+l:"Not sure which documents you need or where to apply? Ask us about Setu office and Social Welfare certificates.",
+i:[
+"Setu office certificates",
+"Social Welfare certificates",
+"Document checklist enquiries",
+"Application support"
+]
+},
+{
+n:"Kamgar Sanghatna",
+c:"Business",
+k:"labour,workers",
+s:"Workers' organisation and support services.",
+l:"A platform for workers and the people who work with them.",
+i:[
+"Workers' organisation enquiries",
+"Support for workers",
+"Information on joining",
+"Coordination between workers and employers"
+]
+},
+{
+n:"Car / Bikes Denting, Painting & Polish",
+c:"Home",
+k:"car,paint",
+s:"Vehicle denting, painting and polishing.",
+l:"Scratches, dents or a faded finish? Tell us about your vehicle.",
+i:[
+"Dent removal",
+"Body painting",
+"Polish and finishing",
+"Cars and bikes"
+]
+},
+{
+n:"Repairs All Motor",
+c:"Home",
+k:"mechanic,engine",
+s:"Motor and vehicle repair services.",
+l:"Vehicle acting up? Describe the problem and the make and model.",
+i:[
+"Two-wheeler repairs",
+"Car repairs",
+"Motor and engine work",
+"Servicing and maintenance enquiries"
+]
+},
+{
+n:"Dry Cleaning",
+c:"Home",
+k:"laundry,clothes",
+s:"Clothing dry-cleaning services.",
+l:"Everyday wear, occasion outfits or heavy blankets. Tell us what needs cleaning.",
+i:[
+"Shirts, suits and daily wear",
+"Sarees and occasion wear",
+"Woollens and blankets",
+"Pickup and delivery enquiries"
+]
+},
+{
+    n:"Car Wash",
+    c:"Home",
+    k:"carwashlocal",
+    s:"Car washing and cleaning services.",
+    l:"Get your car looking fresh again. Ask about wash options for your vehicle.",
+    i:[
+        "Exterior wash",
+        "Interior cleaning",
+        "Polish and finishing",
+        "Regular wash enquiries"
+    ]
+},
+{
+n:"Health & Fitness Centre",
+c:"Health",
+k:"gym,fitness",
+s:"Fitness centres, workouts and wellness services.",
+l:"Ready to get active? Tell us your goals and we will point you to fitness and wellness options.",
+i:[
+"Gym and workouts",
+"Fitness training",
+"Wellness programmes",
+"Membership enquiries"
+]
+},
+// {
+// n:"Cleaning",
+// c:"Home",
+// k:"cleaning,home",
+// s:"Home and company cleaning services.",
+// l:"For homes, shops and offices. Tell us the size of the space and when you need it cleaned.",
+// i:[
+// "Home cleaning",
+// "Office and shop cleaning",
+// "Post-event and move-in cleaning",
+// "One-time or regular cleaning"
+// ]
+// },
+{
+n:"Second-Hand Materials",
+c:"Business",
+k:"appliances",
+s:"Fridge, washing machine, oven, mobile, laptop, bike, car, AC and more.",
+l:"Buy or sell pre-owned items. Tell us what you are looking for or what you want to sell.",
+i:[
+"Fridge and washing machine",
+"Oven and AC",
+"Mobile phones and laptops",
+"Bikes and cars"
+]
+},
+{
+    n:"Home Services",
+    c:"Home",
+    k:"home",
+    s:"Useful services and support for your home.",
+    l:"For the many small jobs around a home. Describe what needs doing.",
+    i:[
+        "Plumbing and electrical work",
+        "Repairs and maintenance",
+        "Painting and small fixes",
+        "Help finding the right person"
+    ]
+},
+{
+n:"Physiotherapist",
+c:"Health",
+k:"physiotherapy",
+s:"Physiotherapy and rehabilitation enquiries.",
+l:"Dealing with pain or recovering from an injury? Ask about physiotherapy.",
+i:[
+"Pain and mobility care",
+"Rehabilitation after injury",
+"Exercise guidance",
+"Appointment enquiries"
+]
+},
+{
+n:"New Shop Development",
+c:"Business",
+k:"shop,interior",
+s:"Shop interior and exterior development.",
+l:"Opening a new shop or refreshing an old one? Share your space and ideas.",
+i:[
+"Interior design",
+"Exterior and signboards",
+"Shelving and display",
+"Complete shop set-up"
+]
+},
+{
+n:"Mobile Accessories",
+c:"Business",
+k:"smartphone,accessories",
+s:"Mobile covers, chargers, cables and accessories.",
+l:"Everything to go with your phone. Ask about what you need and your phone model.",
+i:[
+"Covers and screen guards",
+"Chargers and cables",
+"Earphones and power banks",
+"Retail and bulk enquiries"
+]
+},
+{
+n:"Yoga & Wellness",
+c:"Health",
+k:"yoga",
+s:"Yoga classes and guided wellness sessions.",
+l:"Enquire about yoga batches, session timings and suitable programmes.",
+i:["Group yoga classes","Personal yoga sessions","Beginner-friendly batches","Wellness and flexibility practice"]
+},
+{
+n:"Software Development",
+c:"Business",
+k:"software,laptop",
+s:"Custom software and website development services.",
+l:"Discuss your business requirement, website, application or software idea with a development provider.",
+i:["Website development","Custom business software","Web and mobile applications","Maintenance and technical support"]
+},
+{
+n:"Blood Bank",
+c:"Health",
+k:"blood",
+s:"Blood bank enquiries and donor coordination assistance.",
+l:"Contact HK Hub to make an enquiry about blood requirements or donor coordination. Blood group, stock and availability must be confirmed directly with the relevant blood bank.",
+i:["Blood requirement enquiries","Blood group and component enquiries","Donor coordination","Direct confirmation with the blood bank"]
+},
+{
+n:"Social Media Marketing",
+c:"Business",
+k:"billboard,smartphone",
+s:"Social media page handling and digital promotion.",
+l:"Get help managing your business social pages and promoting products, services or offers online.",
+i:["Social media page management","Posts, reels and content planning","Business page promotion","Campaign and engagement support"]
+},
+{
+n:"Makeup Artist",
+c:"Beauty",
+k:"makeup,bride",
+s:"Makeup services for weddings, functions and occasions.",
+l:"Enquire about makeup artists for your event. Share the occasion, date, venue and preferred style.",
+i:["Bridal and wedding makeup","Engagement and reception makeup","Party and occasion makeup","Makeup trial enquiries"]
+},
+{
+    n:"Mehendi Artist",
+    c:"Beauty",
+    k:"mehendilocal",
+    s:"Mehendi application for weddings and celebrations.",
+    l:"Find mehendi artists for bridal, family and function bookings.",
+    i:[
+        "Bridal mehendi",
+        "Family and guest mehendi",
+        "Haldi and function bookings",
+        "Design and appointment enquiries"
+    ]
+},
+{
+n:"Water Bottles, Cold Drinks & Custom Branding",
+c:"Food",
+k:"water,indian",
+s:"Bottled water, cold drinks and customized branded bottle labels for businesses and events.",
+l:"Enquire about bottled drinking water and cold drinks for personal use, shops, gatherings or events. Customized stickers and labels can feature your business name, logo or event branding. Ask the provider about brands, quantities, delivery and customization options.",
+i:["Bottled drinking water and chilled water bottles","Cold drinks and soft drinks","Bulk and function orders","Business-branded bottle labels","Custom logo stickers","Wedding and event bottle labels","Bulk customization enquiries"]
+},
+{
+n:"Handmade Products, Rangoli Mats & Bags",
+c:"Arts",
+k:"handmade,jewellery",
+s:"Handmade and ready-made jewellery, bags and rangoli mats, available for sale or rent where applicable.",
+l:"Explore handmade and ready-made products, including jewellery, bags and rangoli mats. Enquire about designs, sizes, custom orders, and which bags or rangoli mats are available for rent or sale. Rental dates, availability and charges require provider confirmation.",
+i:["Handmade jewellery and creative products","Handmade and ready-made bags","Rangoli mats","Bags and rangoli mats for rent or sale","Custom product enquiries","Availability and pricing enquiries"]
+},
+{
+n:"Jewellery Making Classes",
+c:"Education",
+k:"jewellery,classroom",
+s:"Classes to learn handmade jewellery making.",
+l:"Ask about jewellery-making batches, course content, materials and class timings.",
+i:["Beginner jewellery-making classes","Design and crafting techniques","Materials and tools guidance","Batch and fee enquiries"]
+},
+{
+n:"Photography & Shoots",
+c:"Events",
+k:"photography,filming",
+s:"Photography and themed shoots for functions and portfolios.",
+l:"Enquire about photographers for mehendi, haldi and model shoots. Share the date, location and type of shoot.",
+i:["Mehendi shoots","Haldi shoots","Model and portfolio shoots","Event photography enquiries"]
+},
+{
+n:"Dress Rental",
+c:"Beauty",
+k:"dress,bride",
+s:"Dresses and occasion outfits available on rent.",
+l:"Ask about outfit styles, sizes, rental dates, deposits and charges. Availability is subject to provider confirmation.",
+i:["Wedding and function outfits","Traditional and occasion wear","Size and date enquiries","Rental terms and charges"]
+},
+{
+n:"Nail Art & Classes",
+c:"Beauty",
+k:"nails",
+s:"Nail art services, products and learning classes.",
+l:"Enquire about nail art designs, nail products for sale and classes for beginners or learners.",
+i:["Nail art services and designs","Nail art products for sale","Beginner nail art classes","Batch and appointment enquiries"]
+},
+{
+n:"Band, DJ & Musical Teams",
+c:"Events",
+k:"music,stage",
+s:"Bands, DJs and musical teams for functions.",
+l:"Find music and entertainment teams for weddings, celebrations and other events. Share the date, venue and event type.",
+i:["DJ services","Live bands and musical groups","Traditional and function music teams","Event date and booking enquiries"]
+},
+{
+n:"Pheta Tying",
+c:"Events",
+k:"wedding,stage",
+s:"Pheta tying for wedding functions.",
+l:"Enquire about traditional pheta tying for the groom, family members and guests at wedding functions.",
+i:["Groom pheta tying","Family and guest pheta tying","Wedding and traditional functions","Group booking enquiries"]
+},
+{
+n:"Furniture",
+c:"Home",
+k:"furniture,interior",
+s:"Furniture sales and related enquiries.",
+l:"Ask about furniture requirements for homes, offices or shops, including available designs and sizes.",
+i:["Home furniture","Office and shop furniture","New furniture enquiries","Size, design and delivery enquiries"]
+},
+{
+n:"Painting Services",
+c:"Home",
+k:"painter,interior",
+s:"Painters for homes, shops and other properties.",
+l:"Enquire about painting work and share the property type, approximate area and required finish.",
+i:["Interior painting","Exterior painting","Shop and office painting","Repainting and touch-ups"]
+},
+{
+n:"Centering – Material & Labour",
+c:"Home",
+k:"centering,construction",
+s:"Construction centering material and labour services.",
+l:"Enquire about both centering or shuttering material and the labour required for construction work. Share the site location, project details and dates.",
+i:["Centering and shuttering material","Centering labour","Material with labour arrangements","Site and project enquiries"]
+},
+{
+n:"Local Transport – Chhota Hatti & Rickshaw",
+c:"Transport",
+k:"rickshaw,bus",
+s:"Local transport using Chhota Hatti vehicles and rickshaws.",
+l:"Enquire about local goods transport or rickshaw services. Share pickup, destination, date and load or passenger details.",
+i:["Chhota Hatti goods transport","Rickshaw services","Local pickup and drop","Availability and fare enquiries"]
+},
+{
+n:"Dance Classes",
+c:"Education",
+k:"dance,classroom",
+s:"Dance classes for learners and enthusiasts.",
+l:"Ask about dance styles, age groups, batch timings and class fees.",
+i:["Beginner dance classes","Dance practice and training","Group batches","Timing and fee enquiries"]
+},
+{
+n:"Music Classes",
+c:"Education",
+k:"music,classroom",
+s:"Music lessons and training classes.",
+l:"Enquire about music lessons, instruments or vocal training, batch timings and fees.",
+i:["Vocal music classes","Instrument learning enquiries","Beginner music lessons","Batch and fee details"]
+} 
+];
+/* ============================================================
+HERO IMAGE REELS
+============================================================ */
+const HERO = [
+["wedding,decoration","Celebrations","Events"],
+["bus,travel","Travel","Transport"],
+["hotel,room","Hotels","Transport"],
+["classroom,students","Classes","Education"],
+["carwash","Car Care","Home"],
+["interior,livingroom","Home Decor","Home"],
+["gym,fitness","Fitness","Health"],
+["office,interview","Jobs","Business"],
+["laptop,camera","Electronics","Business"],
+["indian,food","Mess","Home"],
+["smartphone,accessories","Mobile","Business"],
+["shop,interior","New Shops","Business"]
+];
+function tile(item) {
+const d = document.createElement("div");
+d.className = "tile";
+setPhotoBackground(d,item[0],item[2]);
+const label = document.createElement("span");
+label.textContent = item[1];
+d.appendChild(label);
+return d;
+}
+function fillReel(element,list) {
+[0,1].forEach(() => {
+list.forEach(item => {
+element.appendChild(tile(item));
+});
+});
+}
+fillReel($("reel1"),HERO.slice(0,6));
+fillReel($("reel2"),HERO.slice(6));
+/* ============================================================
+SERVICE FILTERS
+============================================================ */
+let activeCat = "All";
+const cats = ["All",...Object.keys(CATS)];
+function buildFilters() {
+const box = $("filters");
+box.innerHTML = "";
+cats.forEach(category => {
+const button = document.createElement("button");
+button.type = "button";
+button.className =
+"filter" +
+(category === activeCat ? " active" : "");
+const count = category === "All"
+? SERVICES.length
+: SERVICES.filter(s => s.c === category).length;
+const label = category === "All"
+? "All Services"
+: CATS[category].label;
+button.textContent = label + " " + count;
+button.setAttribute(
+"aria-pressed",
+category === activeCat
+);
+button.onclick = () => {
+activeCat = category;
+buildFilters();
+renderServices();
+};
+box.appendChild(button);
+});
+}
+/* ============================================================
+RENDER SERVICE CARDS
+============================================================ */
+function renderServices() {
+const query = $("search").value.toLowerCase().trim();
+const grid = $("serviceGrid");
+grid.innerHTML = "";
+let shown = 0;
+SERVICES.forEach((service,index) => {
+if (
+activeCat !== "All" &&
+service.c !== activeCat
+) {
+return;
+}
+const searchable = (
+service.n + " " +
+service.s + " " +
+service.l + " " +
+service.i.join(" ") + " " +
+CATS[service.c].label
+).toLowerCase();
+if (query && !searchable.includes(query)) {
+return;
+}
+const card = document.createElement("button");
+card.type = "button";
+card.className = "card";
+card.dataset.serviceIndex = index;
+card.style.animationDelay =
+Math.min(shown * 40,400) + "ms";
+card.setAttribute("aria-haspopup","dialog");
+card.setAttribute(
+"aria-label",
+service.n + " – view details"
+);
+// Actual background photograph
+setPhotoBackground(card,service.k,service.c);
+const tag = document.createElement("span");
+tag.className = "tag";
+tag.textContent = CATS[service.c].label;
+card.appendChild(tag);
+const content = document.createElement("div");
+content.className = "txt";
+const heading = document.createElement("h3");
+heading.textContent = service.n;
+const description = document.createElement("p");
+description.textContent = service.s;
+const more = document.createElement("span");
+more.className = "more";
+more.textContent = "View details →";
+content.append(heading,description,more);
+card.appendChild(content);
+card.onclick = () => openModal(index,card);
+grid.appendChild(card);
+shown++;
+});
+$("empty").style.display = shown ? "none" : "block";
+}
+/* ============================================================
+SERVICE DETAIL MODAL
+============================================================ */
+let current = 0;
+let lastFocus = null;
+function openModal(index,opener) {
+const service = SERVICES[index];
+current = index;
+lastFocus = opener || document.activeElement;
+const media = $("mMedia");
+// Remove old image-related content
+setPhotoBackground(media,service.k,service.c);
+$("mTag").textContent = CATS[service.c].label;
+$("mTitle").textContent = service.n;
+$("mLong").textContent = service.l;
+const list = $("mList");
+list.innerHTML = "";
+service.i.forEach(item => {
+const li = document.createElement("li");
+li.textContent = item;
+list.appendChild(li);
+});
+$("mNote").textContent =
+"Availability and pricing depend on the service provider. Tell us your requirement and we will help you take it forward.";
+$("mWa").href =
+"https://wa.me/" + WA +
+"?text=" +
+encodeURIComponent(
+"Hello HK Hub, I would like to know more about: " +
+service.n
+);
+const modal = $("modal");
+modal.hidden = false;
+document.body.classList.add("lock");
+requestAnimationFrame(() => {
+requestAnimationFrame(() => {
+modal.classList.add("open");
+modal.querySelector(".sheet").scrollTop = 0;
+modal.querySelector(".x").focus();
+});
+});
+}
+function closeModal() {
+const modal = $("modal");
+if (modal.hidden) return;
+modal.classList.remove("open");
+document.body.classList.remove("lock");
+setTimeout(() => {
+modal.hidden = true;
+if (lastFocus && lastFocus.focus) {
+lastFocus.focus();
+}
+},300);
+}
+$("modal").addEventListener("click",event => {
+if (event.target.closest("[data-close]")) {
+closeModal();
+}
+});
+document.addEventListener("keydown",event => {
+const modal = $("modal");
+if (modal.hidden) return;
+if (event.key === "Escape") {
+closeModal();
+return;
+}
+if (event.key === "Tab") {
+const focusable = [
+...modal.querySelectorAll(
+"a[href],button:not([disabled])"
+)
+].filter(element => element.offsetParent !== null);
+if (!focusable.length) return;
+const first = focusable[0];
+const last = focusable[focusable.length - 1];
+if (
+event.shiftKey &&
+document.activeElement === first
+) {
+event.preventDefault();
+last.focus();
+} else if (
+!event.shiftKey &&
+document.activeElement === last
+) {
+event.preventDefault();
+first.focus();
+}
+}
+});
+/* Modal enquiry form */
+$("mForm").onclick = () => {
+const service = SERVICES[current];
+$("eservice").value = service.n;
+$("edetails").value =
+"I would like to know more about " + service.n + ".";
+closeModal();
+setTimeout(() => {
+$("register").scrollIntoView({
+behavior:"smooth"
+});
+},320);
+};
+/* ============================================================
+POPULATE SERVICE SELECT BOXES
+============================================================ */
+SERVICES.forEach(service => {
+["rservice","eservice"].forEach(id => {
+const option = document.createElement("option");
+option.value = service.n;
+option.textContent = service.n;
+$(id).appendChild(option);
+});
+});
+/* ============================================================
+REGISTRATION FORM
+============================================================ */
+$("regForm").addEventListener("submit",event => {
+event.preventDefault();
+const message =
+"HK HUB – REGISTRATION\n" +
+"Name: " + $("rname").value + "\n" +
+"Mobile: " + $("rphone").value + "\n" +
+"I am a: " + $("rtype").value + "\n" +
+"Service: " + $("rservice").value + "\n" +
+"Details: " + $("rmessage").value;
+wa(message);
+});
+/* ============================================================
+QUICK ENQUIRY FORM
+============================================================ */
+$("enqForm").addEventListener("submit",event => {
+event.preventDefault();
+const message =
+"HK HUB – SERVICE ENQUIRY\n" +
+"Name: " + $("ename").value + "\n" +
+"Service: " + $("eservice").value + "\n" +
+"Location: " + $("ecity").value + "\n" +
+"Requirement: " + $("edetails").value;
+wa(message);
+});
+/* ============================================================
+HERO QUICK FINDER
+============================================================ */
+function jumpToServices(query) {
+$("search").value = query;
+activeCat = "All";
+buildFilters();
+renderServices();
+$("services").scrollIntoView({
+behavior:"smooth"
+});
+}
+$("finder").addEventListener("submit",event => {
+event.preventDefault();
+jumpToServices($("heroSearch").value);
+});
+/* QUICK CHIPS */
+[
+"Functions",
+"Classes",
+"Car Wash",
+"Jobs",
+"Loans",
+"Hotels"
+].forEach(label => {
+const button = document.createElement("button");
+button.type = "button";
+button.textContent = label;
+button.onclick = () => jumpToServices(label);
+$("chips").appendChild(button);
+});
+/* SERVICE SEARCH */
+$("search").addEventListener("input",renderServices);
+/* Rebuild the service cards when switching between mobile and larger screens. */
+const mobileServicesQuery = window.matchMedia("(max-width:600px)");
+if (mobileServicesQuery.addEventListener) {
+mobileServicesQuery.addEventListener("change",renderServices);
+} else {
+mobileServicesQuery.addListener(renderServices);
+}
+/* ============================================================
+MOBILE NAVIGATION
+============================================================ */
+const menuBtn = $("menuBtn");
+const links = $("links");
+function setMenu(open) {
+links.classList.toggle("open",open);
+menuBtn.setAttribute(
+"aria-expanded",
+open
+);
+menuBtn.textContent = open ? "×" : "☰";
+menuBtn.setAttribute(
+"aria-label",
+open ? "Close menu" : "Open menu"
+);
+}
+menuBtn.onclick = () => {
+setMenu(!links.classList.contains("open"));
+};
+links.addEventListener("click",event => {
+if (event.target.closest("a")) {
+setMenu(false);
+}
+});
+/* ============================================================
+HEADER SCROLL EFFECT
+============================================================ */
+window.addEventListener("scroll",() => {
+$("top").classList.toggle(
+"scrolled",
+window.scrollY > 20
+);
+},{passive:true});
+/* ============================================================
+SCROLL REVEAL
+============================================================ */
+const revealElements = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add("in");
+observer.unobserve(entry.target);
+}
+});
+},{
+threshold:.12
+});
+revealElements.forEach(element => {
+observer.observe(element);
+});
+} else {
+revealElements.forEach(element => {
+element.classList.add("in");
+});
+}
+/* ============================================================
+INITIALIZE WEBSITE
+============================================================ */
+$("year").textContent = new Date().getFullYear();
+$("serviceCountHero").textContent = SERVICES.length;
+$("serviceCountButton").textContent = SERVICES.length + " Services";
+buildFilters();
+renderServices();
+</script>
+</body>
+</html>
